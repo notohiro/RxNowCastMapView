@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -28,7 +28,7 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D391ACC11DC448DA00B9D866"
+               BlueprintIdentifier = "D391ACE11DC451FD00B9D866"
                BuildableName = "RxNowCastMapViewTests.xctest"
                BlueprintName = "RxNowCastMapViewTests"
                ReferencedContainer = "container:RxNowCastMapView.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D391ACC11DC448DA00B9D866"
+               BlueprintIdentifier = "D391ACE11DC451FD00B9D866"
                BuildableName = "RxNowCastMapViewTests.xctest"
                BlueprintName = "RxNowCastMapViewTests"
                ReferencedContainer = "container:RxNowCastMapView.xcodeproj">

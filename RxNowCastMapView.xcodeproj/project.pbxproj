@@ -11,7 +11,6 @@
 		D32748081DC6B58B00F2C570 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E513CB1DBEE3690016050F /* RxSwift.framework */; };
 		D327480C1DC6B7EE00F2C570 /* RxRainLevelsModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D327480B1DC6B7EE00F2C570 /* RxRainLevelsModelTests.swift */; };
 		D327480E1DC6BC5200F2C570 /* RxTileModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D327480D1DC6BC5200F2C570 /* RxTileModelTests.swift */; };
-		D391ACBB1DC42CDF00B9D866 /* RxNowCastMapViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D391ACBA1DC42CDF00B9D866 /* RxNowCastMapViewError.swift */; };
 		D391ACBD1DC42D9D00B9D866 /* RxTileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D391ACBC1DC42D9D00B9D866 /* RxTileModel.swift */; };
 		D391ACE31DC451FD00B9D866 /* RxNowCastMapView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D391ACDA1DC451FD00B9D866 /* RxNowCastMapView.framework */; };
 		D391ACF11DC452BE00B9D866 /* RxBaseTimeModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D391ACC41DC448DA00B9D866 /* RxBaseTimeModelTests.swift */; };
@@ -20,7 +19,6 @@
 		D391ACF41DC4530F00B9D866 /* RxBaseTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E5137E1DBEC6A00016050F /* RxBaseTimeModel.swift */; };
 		D391ACF51DC4531300B9D866 /* RxRainLevelsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F1E8DF1DC2CD0C0006F25E /* RxRainLevelsModel.swift */; };
 		D391ACF61DC4531600B9D866 /* RxTileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D391ACBC1DC42D9D00B9D866 /* RxTileModel.swift */; };
-		D391ACF71DC4531900B9D866 /* RxNowCastMapViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D391ACBA1DC42CDF00B9D866 /* RxNowCastMapViewError.swift */; };
 		D391ACFB1DC4578700B9D866 /* NowCastMapView.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D3E5140A1DBF0CFE0016050F /* NowCastMapView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D391ACFC1DC4578B00B9D866 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D3E513CB1DBEE3690016050F /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D3E513E91DBF04AA0016050F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E513CB1DBEE3690016050F /* RxSwift.framework */; };
@@ -58,7 +56,6 @@
 		D327480B1DC6B7EE00F2C570 /* RxRainLevelsModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxRainLevelsModelTests.swift; sourceTree = "<group>"; };
 		D327480D1DC6BC5200F2C570 /* RxTileModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTileModelTests.swift; sourceTree = "<group>"; };
 		D33D84651DCF29AD00A627F6 /* RxNowCastMapView.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = RxNowCastMapView.podspec; sourceTree = "<group>"; };
-		D391ACBA1DC42CDF00B9D866 /* RxNowCastMapViewError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxNowCastMapViewError.swift; sourceTree = "<group>"; };
 		D391ACBC1DC42D9D00B9D866 /* RxTileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTileModel.swift; sourceTree = "<group>"; };
 		D391ACC41DC448DA00B9D866 /* RxBaseTimeModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxBaseTimeModelTests.swift; sourceTree = "<group>"; };
 		D391ACC61DC448DA00B9D866 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -144,7 +141,6 @@
 				D3E5137E1DBEC6A00016050F /* RxBaseTimeModel.swift */,
 				D3F1E8DF1DC2CD0C0006F25E /* RxRainLevelsModel.swift */,
 				D391ACBC1DC42D9D00B9D866 /* RxTileModel.swift */,
-				D391ACBA1DC42CDF00B9D866 /* RxNowCastMapViewError.swift */,
 				D39EE17A1DBE35F5004DC2CE /* Info.plist */,
 			);
 			path = RxNowCastMapView;
@@ -241,22 +237,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Hiroshi Noto";
 				TargetAttributes = {
 					D391ACD91DC451FD00B9D866 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = NGSEKJM42E;
 						ProvisioningStyle = Automatic;
 					};
 					D391ACE11DC451FD00B9D866 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = NGSEKJM42E;
 						ProvisioningStyle = Automatic;
 					};
 					D3E513D11DBF04930016050F = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = NGSEKJM42E;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -309,7 +302,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D391ACF71DC4531900B9D866 /* RxNowCastMapViewError.swift in Sources */,
 				D391ACF61DC4531600B9D866 /* RxTileModel.swift in Sources */,
 				D391ACF51DC4531300B9D866 /* RxRainLevelsModel.swift in Sources */,
 				D391ACF41DC4530F00B9D866 /* RxBaseTimeModel.swift in Sources */,
@@ -331,7 +323,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D391ACBB1DC42CDF00B9D866 /* RxNowCastMapViewError.swift in Sources */,
 				D391ACBD1DC42D9D00B9D866 /* RxTileModel.swift in Sources */,
 				D3F1E8E01DC2CD0C0006F25E /* RxRainLevelsModel.swift in Sources */,
 				D3E513EA1DBF04BB0016050F /* RxBaseTimeModel.swift in Sources */,
@@ -354,7 +345,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = NGSEKJM42E;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -377,7 +368,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = NGSEKJM42E;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -399,7 +390,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = NGSEKJM42E;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -418,7 +409,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = NGSEKJM42E;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -451,6 +442,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -504,6 +496,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -538,7 +531,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = NGSEKJM42E;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -562,7 +555,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = NGSEKJM42E;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
