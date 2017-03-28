@@ -35,12 +35,7 @@ class RxRainLevelsModelTests: BaseTestCase {
 				let request = RainLevelsModel.Request(coordinate: coordinate, range: 0...0)
 
 				rainLevelsModel.rx.rainLevels(with: request).subscribe(onNext: { result in
-					switch result {
-					case .succeeded(_, _):
-						self.isFinished = true
-					default:
-						break
-					}
+					self.isFinished = true
 				}).addDisposableTo(bag)
 			}
 
