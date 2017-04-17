@@ -27,24 +27,46 @@ class RxTileModelTests: BaseTestCase {
 
 		let baseTimeModel = RxBaseTimeModel()
 
-		baseTimeModel.baseTime.subscribe(onNext: { baseTime in
-			if let baseTime = baseTime {
-				let tileModel = RxTileModel(baseTime: baseTime)
+		let coordinate = CLLocationCoordinate2DMake(35.5758852, 139.6574993)
+		let coordinates = Coordinates(origin: coordinate, terminal: coordinate)
+		let request = TileModel.Request(index: 0, scale: 0.000122, coordinates: coordinates)
 
-				tileModel.added.subscribe(onNext: { tiles in
-					self.isFinished = true
-				}).addDisposableTo(bag)
+		let tileModel = baseTimeModel.baseTime
+			.map { baseTime -> RxTileModel? in
+				guard let baseTime = baseTime else { return nil }
+				return RxTileModel(baseTime: baseTime)
+			}.shareReplayLatestWhileConnected()
 
-				let coordinate = CLLocationCoordinate2DMake(35.5758852, 139.6574993)
-				let coordinates = Coordinates(origin: coordinate, terminal: coordinate)
-
-				let request = TileModel.Request(index: 0, scale: 0.000122, coordinates: coordinates)
+		tileModel
+			.filter { $0 != nil }
+			.take(1)
+			.subscribe(onNext: { tileModel in
+				guard let tileModel = tileModel else { return }
 				let _ = tileModel.tiles(with: request)
-
 				tileModel.resume()
-			}
+				print("requested")
+			})
+			.addDisposableTo(bag)
 
-		}).addDisposableTo(bag)
+		tileModel
+			.flatMapLatest { tileModel -> Observable<Set<Tile>> in
+				guard let tileModel = tileModel else { return Observable.never() }
+				return tileModel.added
+			}
+			.subscribe(onNext: { [weak self] _ in
+				self?.isFinished = true
+			})
+			.addDisposableTo(bag)
+
+		tileModel
+			.flatMapLatest { tileModel -> Observable<Set<Tile>> in
+				guard let tileModel = tileModel else { return Observable.never() }
+				return tileModel.processing
+			}
+			.subscribe(onNext: { processing in
+				print(processing.count)
+			})
+			.addDisposableTo(bag)
 
 		baseTimeModel.fetch()
 
