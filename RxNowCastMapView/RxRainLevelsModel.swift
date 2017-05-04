@@ -24,7 +24,7 @@ extension RainLevelsModel: ReactiveCompatible { }
 extension Reactive where Base: RainLevelsModel {
 	public func rainLevels(with request: RainLevelsModel.Request) -> Observable<RainLevels> {
 		return Observable.create { observer in
-			let _ = self.base.rainLevels(with: request) { result in
+			let task = self.base.rainLevels(with: request) { result in
 				switch result {
 				case let .succeeded(_, rainLevels):
 					observer.on(.next(rainLevels))
@@ -36,7 +36,7 @@ extension Reactive where Base: RainLevelsModel {
 				}
 			}
 
-			return Disposables.create() { self.base.cancel(request) }
+			return Disposables.create() { task.cancel() }
 		}
 	}
 }
