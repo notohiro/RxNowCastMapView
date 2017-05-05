@@ -32,7 +32,7 @@ class RxRainLevelsModelTests: BaseTestCase {
 				let rainLevelsModel = RainLevelsModel(baseTime: baseTime)
 
 				let coordinate = CLLocationCoordinate2DMake(35.5758852, 139.6574993)
-				let request = RainLevelsModel.Request(coordinate: coordinate, range: 0...0)
+				let request = RainLevelsModel.Request(coordinate: coordinate, range: -12...12)
 
 				rainLevelsModel.rx.rainLevels(with: request).subscribe(onNext: { result in
 					self.isFinished = true
@@ -42,6 +42,39 @@ class RxRainLevelsModelTests: BaseTestCase {
 		}).addDisposableTo(bag)
 
 		baseTimeModel.fetch()
+
+		wait(seconds: 3)
+
+		XCTAssertTrue(isFinished)
+	}
+
+	func testFlatMap() {
+		let bag = DisposeBag()
+
+		let baseTimeModel = RxBaseTimeModel()
+		let request = Variable<RainLevelsModel.Request?>(nil)
+
+		let rainLevels = Observable
+			.combineLatest(baseTimeModel.baseTime, request.asObservable()) { ($0, $1) }
+			.flatMapLatest { baseTime, request -> Observable<RainLevels> in
+				if let baseTime = baseTime, let request = request {
+					let rainLevelsModel = RainLevelsModel(baseTime: baseTime)
+					return rainLevelsModel.rx.rainLevels(with: request).debug()
+				} else {
+					return Observable.never()
+				}
+			}
+
+		rainLevels
+			.subscribe(onNext: { rainLevels in
+				self.isFinished = true
+			})
+			.addDisposableTo(bag)
+
+		baseTimeModel.fetch()
+
+		let coordinate = CLLocationCoordinate2DMake(35.5758852, 139.6574993)
+		request.value = RainLevelsModel.Request(coordinate: coordinate, range: -12...12)
 
 		wait(seconds: 3)
 
