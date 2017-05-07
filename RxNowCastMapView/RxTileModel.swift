@@ -20,6 +20,8 @@ extension Reactive where Base: TileModel {
 				observer.on(.completed)
 			}
 
+			task.resume()
+
 			return Disposables.create(with: task.invalidateAndCancel)
 		}
 	}

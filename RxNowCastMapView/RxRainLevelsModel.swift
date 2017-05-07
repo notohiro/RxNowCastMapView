@@ -36,6 +36,8 @@ extension Reactive where Base: RainLevelsModel {
 				}
 			}
 
+			task.resume()
+
 			return Disposables.create(with: task.cancel)
 		}
 	}
