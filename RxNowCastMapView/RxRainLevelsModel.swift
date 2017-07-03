@@ -29,12 +29,12 @@ extension Reactive where Base: RainLevelsModel {
 				case let .succeeded(_, rainLevels):
 					observer.on(.next(rainLevels))
 					observer.on(.completed)
-				case let .canceled(request):
-					observer.on(.error(RainLevelsModel.Error.canceled(request: request)))
 				case let .failed(request):
 					observer.on(.error(RainLevelsModel.Error.unknown(request: request)))
 				}
 			}
+
+			task.resume()
 
 			return Disposables.create(with: task.cancel)
 		}

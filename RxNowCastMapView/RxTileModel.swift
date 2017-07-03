@@ -10,39 +10,19 @@ import Foundation
 import RxSwift
 import NowCastMapView
 
-open class RxTileModel: TileModel {
-	open let added: Observable<Set<Tile>>
-	fileprivate let addedSubject = PublishSubject<Set<Tile>>()
+extension TileModel: ReactiveCompatible { }
 
-	open let failed: Observable<Tile>
-	fileprivate let failedSubject = PublishSubject<Tile>()
+extension Reactive where Base: TileModel {
+	public func tiles(with request: TileModel.Request) -> Observable<[Tile]> {
+		return Observable.create { observer in
+			let task = self.base.tiles(with: request) { tiles in
+				observer.on(.next(tiles))
+				observer.on(.completed)
+			}
 
-	open let processing: Observable<Set<Tile>>
-	fileprivate let processingSubject = PublishSubject<Set<Tile>>()
+			task.resume()
 
-	override open var processingTiles: Set<Tile> {
-		didSet {
-			processingSubject.on(.next(processingTiles))
+			return Disposables.create(with: task.invalidateAndCancel)
 		}
-	}
-
-	override public init(baseTime: BaseTime) {
-		added = addedSubject.asObservable()
-		failed = failedSubject.asObservable()
-		processing = processingSubject.asObservable().shareReplayLatestWhileConnected()
-
-		super.init(baseTime: baseTime)
-
-		delegate = self
-	}
-}
-
-extension RxTileModel: TileModelDelegate {
-	public func tileModel(_ model: TileModel, added tiles: Set<Tile>) {
-		addedSubject.on(.next(tiles))
-	}
-
-	public func tileModel(_ model: TileModel, failed tile: Tile) {
-		failedSubject.on(.next(tile))
 	}
 }
