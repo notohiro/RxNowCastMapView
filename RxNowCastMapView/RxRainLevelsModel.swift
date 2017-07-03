@@ -10,33 +10,29 @@ import Foundation
 import RxSwift
 import NowCastMapView
 
-extension RainLevelsModel {
-	public enum Error: Swift.Error {
-		/// Unknown error occurred.
-		case unknown(request: Request)
-		/// Canceled
-		case canceled(request: Request)
-	}
-}
-
 extension RainLevelsModel: ReactiveCompatible { }
 
 extension Reactive where Base: RainLevelsModel {
 	public func rainLevels(with request: RainLevelsModel.Request) -> Observable<RainLevels> {
 		return Observable.create { observer in
-			let task = self.base.rainLevels(with: request) { result in
-				switch result {
-				case let .succeeded(_, rainLevels):
-					observer.on(.next(rainLevels))
-					observer.on(.completed)
-				case let .failed(request):
-					observer.on(.error(RainLevelsModel.Error.unknown(request: request)))
+			do {
+				let task = try self.base.rainLevels(with: request) { result in
+					switch result {
+					case let .succeeded(_, rainLevels):
+						observer.onNext(rainLevels)
+						observer.onCompleted()
+					case let .failed(_, error):
+						observer.onError(error)
+					}
 				}
+
+				task.resume()
+
+				return Disposables.create(with: task.cancel)
+			} catch let error {
+				observer.onError(error)
+				return Disposables.create()
 			}
-
-			task.resume()
-
-			return Disposables.create(with: task.cancel)
 		}
 	}
 }
