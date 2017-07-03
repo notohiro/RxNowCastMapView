@@ -10,15 +10,12 @@
 		D32747EF1DC6B4D100F2C570 /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32747EE1DC6B4D100F2C570 /* BaseTestCase.swift */; };
 		D32748081DC6B58B00F2C570 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E513CB1DBEE3690016050F /* RxSwift.framework */; };
 		D327480C1DC6B7EE00F2C570 /* RxRainLevelsModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D327480B1DC6B7EE00F2C570 /* RxRainLevelsModelTests.swift */; };
-		D327480E1DC6BC5200F2C570 /* RxTileModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D327480D1DC6BC5200F2C570 /* RxTileModelTests.swift */; };
-		D391ACBD1DC42D9D00B9D866 /* RxTileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D391ACBC1DC42D9D00B9D866 /* RxTileModel.swift */; };
 		D391ACE31DC451FD00B9D866 /* RxNowCastMapView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D391ACDA1DC451FD00B9D866 /* RxNowCastMapView.framework */; };
 		D391ACF11DC452BE00B9D866 /* RxBaseTimeModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D391ACC41DC448DA00B9D866 /* RxBaseTimeModelTests.swift */; };
 		D391ACF21DC452F600B9D866 /* NowCastMapView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E5140A1DBF0CFE0016050F /* NowCastMapView.framework */; };
 		D391ACF31DC4530000B9D866 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E513CB1DBEE3690016050F /* RxSwift.framework */; };
 		D391ACF41DC4530F00B9D866 /* RxBaseTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E5137E1DBEC6A00016050F /* RxBaseTimeModel.swift */; };
 		D391ACF51DC4531300B9D866 /* RxRainLevelsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F1E8DF1DC2CD0C0006F25E /* RxRainLevelsModel.swift */; };
-		D391ACF61DC4531600B9D866 /* RxTileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D391ACBC1DC42D9D00B9D866 /* RxTileModel.swift */; };
 		D391ACFB1DC4578700B9D866 /* NowCastMapView.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D3E5140A1DBF0CFE0016050F /* NowCastMapView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D391ACFC1DC4578B00B9D866 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D3E513CB1DBEE3690016050F /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D3E513E91DBF04AA0016050F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E513CB1DBEE3690016050F /* RxSwift.framework */; };
@@ -54,9 +51,7 @@
 /* Begin PBXFileReference section */
 		D32747EE1DC6B4D100F2C570 /* BaseTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
 		D327480B1DC6B7EE00F2C570 /* RxRainLevelsModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxRainLevelsModelTests.swift; sourceTree = "<group>"; };
-		D327480D1DC6BC5200F2C570 /* RxTileModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTileModelTests.swift; sourceTree = "<group>"; };
 		D33D84651DCF29AD00A627F6 /* RxNowCastMapView.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = RxNowCastMapView.podspec; sourceTree = "<group>"; };
-		D391ACBC1DC42D9D00B9D866 /* RxTileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTileModel.swift; sourceTree = "<group>"; };
 		D391ACC41DC448DA00B9D866 /* RxBaseTimeModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxBaseTimeModelTests.swift; sourceTree = "<group>"; };
 		D391ACC61DC448DA00B9D866 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D391ACDA1DC451FD00B9D866 /* RxNowCastMapView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxNowCastMapView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,7 +102,6 @@
 				D32747EE1DC6B4D100F2C570 /* BaseTestCase.swift */,
 				D391ACC41DC448DA00B9D866 /* RxBaseTimeModelTests.swift */,
 				D327480B1DC6B7EE00F2C570 /* RxRainLevelsModelTests.swift */,
-				D327480D1DC6BC5200F2C570 /* RxTileModelTests.swift */,
 				D391ACC61DC448DA00B9D866 /* Info.plist */,
 			);
 			path = RxNowCastMapViewTests;
@@ -140,7 +134,6 @@
 				D39EE1791DBE35F5004DC2CE /* RxNowCastMapView.h */,
 				D3E5137E1DBEC6A00016050F /* RxBaseTimeModel.swift */,
 				D3F1E8DF1DC2CD0C0006F25E /* RxRainLevelsModel.swift */,
-				D391ACBC1DC42D9D00B9D866 /* RxTileModel.swift */,
 				D39EE17A1DBE35F5004DC2CE /* Info.plist */,
 			);
 			path = RxNowCastMapView;
@@ -302,7 +295,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D391ACF61DC4531600B9D866 /* RxTileModel.swift in Sources */,
 				D391ACF51DC4531300B9D866 /* RxRainLevelsModel.swift in Sources */,
 				D391ACF41DC4530F00B9D866 /* RxBaseTimeModel.swift in Sources */,
 			);
@@ -313,7 +305,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D32747EF1DC6B4D100F2C570 /* BaseTestCase.swift in Sources */,
-				D327480E1DC6BC5200F2C570 /* RxTileModelTests.swift in Sources */,
 				D391ACF11DC452BE00B9D866 /* RxBaseTimeModelTests.swift in Sources */,
 				D327480C1DC6B7EE00F2C570 /* RxRainLevelsModelTests.swift in Sources */,
 			);
@@ -323,7 +314,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D391ACBD1DC42D9D00B9D866 /* RxTileModel.swift in Sources */,
 				D3F1E8E01DC2CD0C0006F25E /* RxRainLevelsModel.swift in Sources */,
 				D3E513EA1DBF04BB0016050F /* RxBaseTimeModel.swift in Sources */,
 			);

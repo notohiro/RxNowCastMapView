@@ -1,8 +1,11 @@
 # RxNowCastMapView
 
+[![Swift](https://img.shields.io/badge/Swift-3.0%2B-orange.svg)](https://swift.org)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/RxNowCastMapView.svg)](https://img.shields.io/cocoapods/v/RxNowCastMapView.svg)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Platform](https://img.shields.io/cocoapods/p/NowCastMapView.svg?style=flat)](http://cocoapods.org/pods/RxNowCastMapView)
+![license](https://cocoapod-badges.herokuapp.com/l/URWeatherView/badge.png)
+[![Twitter](https://img.shields.io/badge/twitter-@notohiro-blue.svg?style=flat)](http://twitter.com/notohiro)
 
 RxNowCastMapView is an Reactive Extension for [NowCastMapView](https://github.com/notohiro/NowCastMapView).
 
@@ -40,26 +43,6 @@ rainLevelsModel.rx.rainLevels(with: request).subscribe(onNext: { result in
 	}
 }).addDisposableTo(bag)
 ```
-
-### RxTileModel
-
-```Swift
-let tileModel = RxTileModel(baseTime: baseTime)
-
-tileModel.added.subscribe(onNext: { tiles in
-	// process Tile
-}).addDisposableTo(bag)
-
-...
-
-let tiles = tileModel.tiles(with: request)
-tileModel.resume()
-
-```
-
-## Author
-
-[![Twitter](https://img.shields.io/badge/twitter-@notohiro-blue.svg?style=flat)](http://twitter.com/notohiro)
 
 ## License
 
