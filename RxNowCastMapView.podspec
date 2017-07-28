@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "RxNowCastMapView"
-  s.version          = "1.5.0"
+  s.version          = "1.5.1"
   s.summary          = "Reactive Extension for NowCastMapView"
   s.homepage         = "https://github.com/notohiro/RxNowCastMapView"
   s.license          = 'MIT'
