@@ -36,10 +36,10 @@ class RxRainLevelsModelTests: BaseTestCase {
 
 				rainLevelsModel.rx.rainLevels(with: request).subscribe(onNext: { result in
 					self.isFinished = true
-				}).addDisposableTo(bag)
+				}).disposed(by: bag)
 			}
 
-		}).addDisposableTo(bag)
+		}).disposed(by: bag)
 
 		baseTimeModel.fetch()
 
@@ -69,7 +69,7 @@ class RxRainLevelsModelTests: BaseTestCase {
 			.subscribe(onNext: { rainLevels in
 				self.isFinished = true
 			})
-			.addDisposableTo(bag)
+			.disposed(by: bag)
 
 		baseTimeModel.fetch()
 

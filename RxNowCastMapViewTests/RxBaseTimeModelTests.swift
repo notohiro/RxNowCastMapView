@@ -27,7 +27,7 @@ class RxBaseTimeModelTests: BaseTestCase {
 
 		model.baseTime.subscribe(onNext: { baseTime in
 			if baseTime != nil { self.isFinished = true }
-		}).addDisposableTo(bag)
+		}).disposed(by: bag)
 
 		model.fetch()
 
