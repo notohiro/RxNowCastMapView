@@ -1,0 +1,19 @@
+language: objective-c
+osx_image: xcode9.3
+
+notifications:
+  email: false
+  slack:
+    secure: l9pUgPV3CqZw7i+y3XP2P5gH+UfMthNI0RX4AHP2hV3M3jtaUBSKXuceDi7XWuTiT9KegrcfHIUZvD/oCNEMmMk450JUE2KGAcIMdHi6lTEAxvUuv68O7WnMO4MuZkak7/F6drLOZyx8fQe8AS82fKLCMrWdLzA/9d1m8j8nVTsVntqBwwqEle+EoUUv8rWLW9HMdlgeIvfDrZAAgzSGe9PSfYKcFydb0kWaLN084hp9U+Uc7w3o/Arw5Basae9PLjMx6KLdYn9KRejN7Qt+BIBuGQPygaNkbTbxYrOWmf0QLgyK/Y0Jey8uaXN0UA7DcIz08sSMDG+mOJeU2li4v7fTWnvjPgXc7PZvXxK1Pit+x1r/C1a2dLvB4CA4qdItnfw+lEal2/BOcKKiY2t8a9rwDdcBBpzJyb3ctkfhWaaXB1nTlxMRPuSRmiFXV0bFgzYZgg1PGL9UbEAIV2BhynZVQNFckU0wveB72Um0BjfZQdkN+dcY2JOJTW53piCjgew5dNXsmcFdy/sn7W8gyguyYMML8Jt1uLGBvpuzor5mETRKPdJx/3QOQdrfZ/drfDUO9mZ0vkM9bdS5z8VExePVGfb4I/WCgLLeXINESjjokxuZU8CAqiSX4fDStgN3beGMxhX150DbxppDFWpvg8DO8I/eita/zskkNaA1cB4=
+
+cache:
+  directories:
+    - Carthage
+
+before_install:
+  - brew update
+  - brew outdated carthage || brew upgrade carthage
+  - carthage bootstrap --verbose --no-use-binaries --platform iOS --cache-builds
+
+script:
+  - xcodebuild clean test -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=11.3' -project RxNowCastMapView.xcodeproj -scheme 'RxNowCastMapView iOS' CODE_SIGNING_REQUIRED=NO
