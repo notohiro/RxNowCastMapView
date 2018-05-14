@@ -1,6 +1,7 @@
 # RxNowCastMapView
 
 [![Swift](https://img.shields.io/badge/Swift-3.0%2B-orange.svg)](https://swift.org)
+[![Build Status](https://www.bitrise.io/app/eda156bb395b10f3/status.svg?token=oD-Dx2lTzoZXc88E-rcBrw)](https://www.bitrise.io/app/eda156bb395b10f3)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/RxNowCastMapView.svg)](https://img.shields.io/cocoapods/v/RxNowCastMapView.svg)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Platform](https://img.shields.io/cocoapods/p/NowCastMapView.svg?style=flat)](http://cocoapods.org/pods/RxNowCastMapView)
