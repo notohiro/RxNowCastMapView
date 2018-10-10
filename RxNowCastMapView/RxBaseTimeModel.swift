@@ -11,7 +11,7 @@ import RxSwift
 import NowCastMapView
 
 open class RxBaseTimeModel: BaseTimeModel {
-	open let baseTime: Observable<BaseTime?>
+    public let baseTime: Observable<BaseTime?>
 	fileprivate let baseTimeVar = Variable<BaseTime?>(nil)
 
 	override public init() {
