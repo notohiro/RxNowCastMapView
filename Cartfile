@@ -1,2 +1,2 @@
-github "notohiro/NowCastMapView"
+github "notohiro/NowCastMapView" "develop"
 github "ReactiveX/RxSwift"

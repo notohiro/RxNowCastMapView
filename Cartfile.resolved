@@ -1,2 +1,2 @@
-github "ReactiveX/RxSwift" "4.1.2"
-github "notohiro/NowCastMapView" "4.0.1"
+github "ReactiveX/RxSwift" "5.0.1"
+github "notohiro/NowCastMapView" "4968dc0be4f848bde52d97f5d1d7bd63f5082faf"
