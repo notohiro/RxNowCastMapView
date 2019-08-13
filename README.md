@@ -10,6 +10,11 @@
 
 RxNowCastMapView is an Reactive Extension for [NowCastMapView](https://github.com/notohiro/NowCastMapView).
 
+## Requirements
+
+- iOS 8.0+
+- Xcode 11.0+
+
 ## Installation
 
 RxNowCastMapView is available through [CocoaPods](http://cocoapods.org) and [Carthage](https://github.com/Carthage/Carthage).
