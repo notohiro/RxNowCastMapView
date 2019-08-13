@@ -19,7 +19,7 @@
 		D3E513E91DBF04AA0016050F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E513CB1DBEE3690016050F /* RxSwift.framework */; };
 		D3E513EA1DBF04BB0016050F /* RxBaseTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E5137E1DBEC6A00016050F /* RxBaseTimeModel.swift */; };
 		D3E5140B1DBF0CFE0016050F /* NowCastMapView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E5140A1DBF0CFE0016050F /* NowCastMapView.framework */; };
-		D3F1E8E01DC2CD0C0006F25E /* RxRainLevelsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F1E8DF1DC2CD0C0006F25E /* RxRainLevelsModel.swift */; };
+		D3F1E8E01DC2CD0C0006F25E /* RainLevelsModel+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F1E8DF1DC2CD0C0006F25E /* RainLevelsModel+Rx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +63,7 @@
 		D32747EE1DC6B4D100F2C570 /* BaseTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
 		D327480B1DC6B7EE00F2C570 /* RxRainLevelsModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxRainLevelsModelTests.swift; sourceTree = "<group>"; };
 		D33D84651DCF29AD00A627F6 /* RxNowCastMapView.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = RxNowCastMapView.podspec; sourceTree = "<group>"; };
+		D3702FEA2302419E007A0986 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D386DD58216D09780037EFF7 /* RxNowCastMapView iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RxNowCastMapView iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D386DD5C216D09780037EFF7 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		D391ACC41DC448DA00B9D866 /* RxBaseTimeModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxBaseTimeModelTests.swift; sourceTree = "<group>"; };
@@ -74,7 +75,7 @@
 		D3E513CB1DBEE3690016050F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		D3E513D21DBF04930016050F /* RxNowCastMapView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxNowCastMapView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E5140A1DBF0CFE0016050F /* NowCastMapView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NowCastMapView.framework; path = Carthage/Build/iOS/NowCastMapView.framework; sourceTree = "<group>"; };
-		D3F1E8DF1DC2CD0C0006F25E /* RxRainLevelsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxRainLevelsModel.swift; sourceTree = "<group>"; };
+		D3F1E8DF1DC2CD0C0006F25E /* RainLevelsModel+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RainLevelsModel+Rx.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +114,7 @@
 		D39EE16C1DBE35F5004DC2CE = {
 			isa = PBXGroup;
 			children = (
+				D3702FEA2302419E007A0986 /* .swiftlint.yml */,
 				D39C45A520A49F6D00EEC8D3 /* .gitignore */,
 				D39C45A420A49F6D00EEC8D3 /* README.md */,
 				D33D84651DCF29AD00A627F6 /* RxNowCastMapView.podspec */,
@@ -137,7 +139,7 @@
 			children = (
 				D39EE1791DBE35F5004DC2CE /* RxNowCastMapView.h */,
 				D3E5137E1DBEC6A00016050F /* RxBaseTimeModel.swift */,
-				D3F1E8DF1DC2CD0C0006F25E /* RxRainLevelsModel.swift */,
+				D3F1E8DF1DC2CD0C0006F25E /* RainLevelsModel+Rx.swift */,
 				D39EE17A1DBE35F5004DC2CE /* Info-iOS.plist */,
 			);
 			path = RxNowCastMapView;
@@ -194,6 +196,7 @@
 				D3E513CF1DBF04930016050F /* Headers */,
 				D3E513D01DBF04930016050F /* Resources */,
 				D323DA8923013A8D00699ED6 /* Embed Frameworks */,
+				D3702FEB230241BC007A0986 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -262,6 +265,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D3702FEB230241BC007A0986 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D386DD54216D09780037EFF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -277,7 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3F1E8E01DC2CD0C0006F25E /* RxRainLevelsModel.swift in Sources */,
+				D3F1E8E01DC2CD0C0006F25E /* RainLevelsModel+Rx.swift in Sources */,
 				D3E513EA1DBF04BB0016050F /* RxBaseTimeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

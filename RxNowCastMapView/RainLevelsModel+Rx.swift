@@ -7,13 +7,17 @@
 //
 
 import Foundation
-import RxSwift
 import NowCastMapView
+import RxSwift
 
 extension RainLevelsModel: ReactiveCompatible { }
 
-extension Reactive where Base: RainLevelsModel {
-	public func rainLevels(with request: RainLevelsModel.Request) -> Observable<RainLevels> {
+/// Reactive extension for RainLevelsModel
+public extension Reactive where Base: RainLevelsModel {
+    /// Observable sequence of responses for RainLevelsModel request.
+    /// Performing of request starts after observer is subscribed and not after invoking this method.
+    /// - Parameter request: RainLevelsModel request.
+    func rainLevels(with request: RainLevelsModel.Request) -> Observable<RainLevels> {
 		return Observable.create { observer in
 			do {
 				let task = try self.base.rainLevels(with: request) { result in
@@ -21,6 +25,7 @@ extension Reactive where Base: RainLevelsModel {
 					case let .succeeded(_, rainLevels):
 						observer.onNext(rainLevels)
 						observer.onCompleted()
+
 					case let .failed(_, error):
 						observer.onError(error)
 					}
@@ -29,7 +34,7 @@ extension Reactive where Base: RainLevelsModel {
 				task.resume()
 
 				return Disposables.create(with: task.cancel)
-			} catch let error {
+			} catch {
 				observer.onError(error)
 				return Disposables.create()
 			}
