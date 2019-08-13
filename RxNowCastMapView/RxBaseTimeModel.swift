@@ -7,12 +7,15 @@
 //
 
 import Foundation
+
+import RxRelay
 import RxSwift
+
 import NowCastMapView
 
 open class RxBaseTimeModel: BaseTimeModel {
     public let baseTime: Observable<BaseTime?>
-	fileprivate let baseTimeVar = Variable<BaseTime?>(nil)
+    fileprivate let baseTimeVar = BehaviorRelay<BaseTime?>(value: nil)
 
 	override public init() {
 		baseTime = baseTimeVar.asObservable()
@@ -25,6 +28,6 @@ open class RxBaseTimeModel: BaseTimeModel {
 
 extension RxBaseTimeModel: BaseTimeModelDelegate {
 	public func baseTimeModel(_ model: BaseTimeModel, fetched baseTime: BaseTime?) {
-		baseTimeVar.value = baseTime
+        baseTimeVar.accept(baseTime)
 	}
 }

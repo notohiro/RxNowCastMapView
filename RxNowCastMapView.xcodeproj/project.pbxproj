@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D323DA8723013A8D00699ED6 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D323DA8623013A8D00699ED6 /* RxRelay.framework */; };
+		D323DA8823013A8D00699ED6 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D323DA8623013A8D00699ED6 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D323DA8A23013ACB00699ED6 /* RxRelay.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D323DA8623013A8D00699ED6 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D386DD5D216D09780037EFF7 /* RxNowCastMapView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E513D21DBF04930016050F /* RxNowCastMapView.framework */; };
 		D386DD64216D09AF0037EFF7 /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32747EE1DC6B4D100F2C570 /* BaseTestCase.swift */; };
 		D386DD65216D09B20037EFF7 /* RxBaseTimeModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D391ACC41DC448DA00B9D866 /* RxBaseTimeModelTests.swift */; };
@@ -30,12 +33,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		D323DA8923013A8D00699ED6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D323DA8823013A8D00699ED6 /* RxRelay.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D386DD6F216D0CED0037EFF7 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D323DA8A23013ACB00699ED6 /* RxRelay.framework in CopyFiles */,
 				D386DD71216D0CF60037EFF7 /* RxSwift.framework in CopyFiles */,
 				D386DD70216D0CF30037EFF7 /* NowCastMapView.framework in CopyFiles */,
 			);
@@ -44,6 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D323DA8623013A8D00699ED6 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		D32747EE1DC6B4D100F2C570 /* BaseTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
 		D327480B1DC6B7EE00F2C570 /* RxRainLevelsModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxRainLevelsModelTests.swift; sourceTree = "<group>"; };
 		D33D84651DCF29AD00A627F6 /* RxNowCastMapView.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = RxNowCastMapView.podspec; sourceTree = "<group>"; };
@@ -76,6 +92,7 @@
 			files = (
 				D3E5140B1DBF0CFE0016050F /* NowCastMapView.framework in Frameworks */,
 				D3E513E91DBF04AA0016050F /* RxSwift.framework in Frameworks */,
+				D323DA8723013A8D00699ED6 /* RxRelay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +146,7 @@
 		D3E513841DBED3BF0016050F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D323DA8623013A8D00699ED6 /* RxRelay.framework */,
 				D3E5140A1DBF0CFE0016050F /* NowCastMapView.framework */,
 				D3E513CB1DBEE3690016050F /* RxSwift.framework */,
 			);
@@ -175,6 +193,7 @@
 				D3E513CE1DBF04930016050F /* Frameworks */,
 				D3E513CF1DBF04930016050F /* Headers */,
 				D3E513D01DBF04930016050F /* Resources */,
+				D323DA8923013A8D00699ED6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,16 +211,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Hiroshi Noto";
 				TargetAttributes = {
 					D386DD57216D09780037EFF7 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1100;
 						ProvisioningStyle = Manual;
 					};
 					D3E513D11DBF04930016050F = {
 						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1100;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -295,7 +315,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.notohiro.RxNowCastMapView-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -321,7 +341,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.notohiro.RxNowCastMapView-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -330,6 +350,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -390,6 +411,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -443,7 +465,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
@@ -461,7 +483,7 @@
 				PRODUCT_NAME = RxNowCastMapView;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -469,7 +491,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
@@ -487,7 +509,7 @@
 				PRODUCT_NAME = RxNowCastMapView;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

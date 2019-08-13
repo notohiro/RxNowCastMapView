@@ -6,10 +6,14 @@
 //  Copyright © 2016 Hiroshi Noto. All rights reserved.
 //
 
-import XCTest
-import RxSwift
-import NowCastMapView
 import CoreLocation
+
+import XCTest
+
+import RxSwift
+import RxRelay
+
+import NowCastMapView
 
 @testable import RxNowCastMapView
 
@@ -52,7 +56,7 @@ class RxRainLevelsModelTests: BaseTestCase {
 		let bag = DisposeBag()
 
 		let baseTimeModel = RxBaseTimeModel()
-		let request = Variable<RainLevelsModel.Request?>(nil)
+        let request = BehaviorRelay<RainLevelsModel.Request?>(value: nil)
 
 		let rainLevels = Observable
 			.combineLatest(baseTimeModel.baseTime, request.asObservable()) { ($0, $1) }
@@ -74,7 +78,7 @@ class RxRainLevelsModelTests: BaseTestCase {
 		baseTimeModel.fetch()
 
 		let coordinate = CLLocationCoordinate2DMake(35.5758852, 139.6574993)
-		request.value = RainLevelsModel.Request(coordinate: coordinate, range: -12...12)
+		request.accept(RainLevelsModel.Request(coordinate: coordinate, range: -12...12))
 
 		wait(seconds: 3)
 
