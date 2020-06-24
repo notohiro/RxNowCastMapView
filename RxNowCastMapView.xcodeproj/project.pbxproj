@@ -76,6 +76,7 @@
 		D3E513D21DBF04930016050F /* RxNowCastMapView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxNowCastMapView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E5140A1DBF0CFE0016050F /* NowCastMapView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NowCastMapView.framework; path = Carthage/Build/iOS/NowCastMapView.framework; sourceTree = "<group>"; };
 		D3F1E8DF1DC2CD0C0006F25E /* RainLevelsModel+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RainLevelsModel+Rx.swift"; sourceTree = "<group>"; };
+		D3F7819E24A3EFD700B32905 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +115,7 @@
 		D39EE16C1DBE35F5004DC2CE = {
 			isa = PBXGroup;
 			children = (
+				D3F7819E24A3EFD700B32905 /* Cartfile */,
 				D3702FEA2302419E007A0986 /* .swiftlint.yml */,
 				D39C45A520A49F6D00EEC8D3 /* .gitignore */,
 				D39C45A420A49F6D00EEC8D3 /* README.md */,
